@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="nav-right">
+            <a href="{% url 'post_new' %}">New Blog Post</a>
+        </div>
+
+    <br>
+    {% for post in posts %}
+        <div class="post-entry">
+            <h2><a href="{% url 'post_detail' post.id %}">{{ post.title }}</a> </h2>
+        <p>{{ post.body }}</p>
+        </div>
+    {% endfor %}
+
+    {% include 'pagination.html' with page=page_obj %}
+{% endblock %}

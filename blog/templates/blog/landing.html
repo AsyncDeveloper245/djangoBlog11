@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% if user.username %}
+    <h3>Hello, {{ user.username }}</h3>Hello, {{ user.username }}
+
+        {% else %}
+
+        <h3>Hello, User</h3>
+    {% endif %}
+
+{% endblock %}
