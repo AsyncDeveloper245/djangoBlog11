@@ -26,9 +26,7 @@ SECRET_KEY = 'phzoz(zq=!&pca(m3x8qwt*(9xs@7qkv^h8d0*-y$buo3%5rh!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = [
- 'zuridjangoapp.herokuapp.com'
-]
+ALLOWED_HOSTS = [ 'zuridjangoapp.herokuapp.com']
 
 
 # Application definition
@@ -143,4 +141,3 @@ import dj_database_url
 prod_db  =  dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(prod_db)
 
-WHITENOISE_USE_FINDERS = False
