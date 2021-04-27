@@ -27,7 +27,7 @@ SECRET_KEY = 'phzoz(zq=!&pca(m3x8qwt*(9xs@7qkv^h8d0*-y$buo3%5rh!'
 DEBUG = True
 
 ALLOWED_HOSTS = [
- 'https://zuridjangoapp.herokuapp.com/'
+ 'zuridjangoapp.herokuapp.com'
 ]
 
 
