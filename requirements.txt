@@ -2,11 +2,7 @@ dj-database-url==0.5.0
 Django==3.1.7
 django-taggit==1.2.0
 gunicorn==20.1.0
-Pillow @ file:///opt/concourse/worker/volumes/live/991b9a87-3372-4acd-45f9-eaa52701f03c/volume/pillow_1603822262543/work
 psycopg2==2.8.6
 pytz==2020.1
-virtualenv==20.4.2
-virtualenv-clone==0.5.4
-virtualenvwrapper==4.8.4
 Werkzeug==1.0.1
 whitenoise==5.2.0
