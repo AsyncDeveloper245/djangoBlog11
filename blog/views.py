@@ -102,6 +102,6 @@ def Logout(request,id):
     user = User.objects.get(id=id)
     if request.method == 'POST':
         logout(request)
-        return redirect('landing')
+        return redirect('home')
     return render(request,'logout.html',{'user':user})
 
