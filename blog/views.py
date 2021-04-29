@@ -56,7 +56,7 @@ def LoginView(request):
             redirect('login')
     else:
         form = LoginForm()
-        return render(request, 'login.html', {'form': form})
+    return render(request, 'login.html', {'form': form})
 
 
 def BlogDetailView(request, id):
