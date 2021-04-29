@@ -34,7 +34,7 @@ def RegistrationFormView(request):
             new_user = User(username=username, password=password, email=email)
 
             new_user.save()
-            return redirect('landing')
+            return redirect('home')
     else:
         form = ContactForm()
         return render(request, 'register.html', {'form': form})
