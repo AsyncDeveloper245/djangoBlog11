@@ -51,9 +51,9 @@ def LoginView(request):
                     login(request, user)
                     return redirect('home')
             else:
-                HttpResponse('Incorrect details')
+                redirect('register')
         else:
-            HttpResponse('Incorrect details')
+            redirect('login')
     else:
         form = LoginForm()
         return render(request, 'login.html', {'form': form})
