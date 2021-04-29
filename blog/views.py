@@ -6,7 +6,7 @@ from django.urls import reverse_lazy
 from .forms import ContactForm, LoginForm, CommentForm
 from django.shortcuts import redirect, render, Http404, HttpResponseRedirect, get_object_or_404, HttpResponse
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.hashers import check_password
+from django.contrib.auth.hashers import check_password,make_password
 
 # Create your views here.
 
@@ -31,8 +31,10 @@ def RegistrationFormView(request):
             username = form.cleaned_data.get('username')
             password = form.cleaned_data.get('password')
             email = form.cleaned_data.get('email')
+
             new_user = User(username=username, password=password, email=email)
 
+            new_user.password = make_password(password)
             new_user.save()
             return redirect('home')
     else:
@@ -45,10 +47,10 @@ def LoginView(request):
         form = LoginForm(request.POST)
         if form.is_valid():
             cd = form.cleaned_data
+
             user = authenticate(request, username=cd['username'], password=cd['password'])
 
             if user is not None:
-                ch
                 if user.is_active:
                     login(request, user)
                     return redirect('home')
@@ -84,8 +86,10 @@ def BlogDetailView(request, id):
 class BlogCreateView(CreateView):
     model = Post
     template_name = 'post_new.html'
-    fields = ['title', 'body', 'author']
+    fields = ['title', 'body','author']
 
+    def get(self, request, *args, **kwargs):
+        user =  request.user
 
 
 class BlogUpdateView(UpdateView):

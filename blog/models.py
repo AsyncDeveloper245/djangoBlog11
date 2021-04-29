@@ -14,6 +14,9 @@ class Post(models.Model):
     def get_absolute_url(self):
         return reverse('post_detail',args=[str(self.id)])
 
+    def save_model(self, request, obj, form, change):
+        obj.added_by = request.user
+        super().save_model(request, obj, form, change)
 
 
     def __str__(self):
