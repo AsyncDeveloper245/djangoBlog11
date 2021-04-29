@@ -2,7 +2,7 @@
 
 *https://zuridjangoapp.herokuapp.com/*
 
-The Blog app is an extending feature of the Zuri Python Backend Task
+The Blog app is an extensed version of the Zuri Python Backend Task
 
 
 
