@@ -144,3 +144,6 @@ DATABASES['default'].update(prod_db)
 
 django_heroku.settings(locals())
 
+PASSWORD_HASHERS = [
+    'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',
+]

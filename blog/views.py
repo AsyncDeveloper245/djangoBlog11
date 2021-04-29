@@ -6,7 +6,7 @@ from django.urls import reverse_lazy
 from .forms import ContactForm, LoginForm, CommentForm
 from django.shortcuts import redirect, render, Http404, HttpResponseRedirect, get_object_or_404, HttpResponse
 from django.contrib.auth.decorators import login_required
-
+from django.contrib.auth.hashers import check_password
 
 # Create your views here.
 
@@ -32,6 +32,7 @@ def RegistrationFormView(request):
             password = form.cleaned_data.get('password')
             email = form.cleaned_data.get('email')
             new_user = User(username=username, password=password, email=email)
+
             new_user.save()
             return redirect('landing')
     else:
@@ -47,6 +48,7 @@ def LoginView(request):
             user = authenticate(request, username=cd['username'], password=cd['password'])
 
             if user is not None:
+                ch
                 if user.is_active:
                     login(request, user)
                     return redirect('home')
