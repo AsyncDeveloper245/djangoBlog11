@@ -88,10 +88,6 @@ class BlogCreateView(CreateView):
     template_name = 'post_new.html'
     fields = ['title', 'body','author']
 
-    def get(self, request, *args, **kwargs):
-        user =  request.user
-
-
 class BlogUpdateView(UpdateView):
     model = Post
     template_name = 'post_edit.html'
