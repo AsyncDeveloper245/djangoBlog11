@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'phzoz(zq=!&pca(m3x8qwt*(9xs@7qkv^h8d0*-y$buo3%5rh!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [ 'zuridjangoapp.herokuapp.com']
 
