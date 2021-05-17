@@ -74,3 +74,6 @@ fi
 if [ -n "${BASH:-}" -o -n "${ZSH_VERSION:-}" ] ; then
     hash -r
 fi
+
+export SECRET_KEY='phzoz(zq=!&pca(m3x8qwt*(9xs@7qkv^h8d0*-y$buo3%5rh!'
+export DEBUG=True

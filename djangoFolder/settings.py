@@ -16,16 +16,16 @@ import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
+import os
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'phzoz(zq=!&pca(m3x8qwt*(9xs@7qkv^h8d0*-y$buo3%5rh!'
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG =os.getenv('DEBUG')
 
 ALLOWED_HOSTS = [ 'zuridjangoapp.herokuapp.com']
 
@@ -126,7 +126,7 @@ STATIC_URL = '/static/'
 LOGIN_URL = '/login'
 
 PROJECT_ROOT   =   os.path.join(os.path.abspath(__file__))
-STATIC_ROOT  =   os.path.join(PROJECT_ROOT, 'staticfiles')
+STATIC_ROOT  =   os.path.join(PROJECT_ROOT, 'static')
 STATIC_URL = '/static/'
 
 # Extra lookup directories for collectstatic to find static files
