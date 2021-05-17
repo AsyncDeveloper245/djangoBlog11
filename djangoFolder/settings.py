@@ -126,7 +126,7 @@ STATIC_URL = '/static/'
 LOGIN_URL = '/login'
 
 PROJECT_ROOT   =   os.path.join(os.path.abspath(__file__))
-STATIC_ROOT  =   os.path.join(PROJECT_ROOT, 'static')
+STATIC_ROOT  =   os.path.join(PROJECT_ROOT, 'staticfiles')
 STATIC_URL = '/static/'
 
 # Extra lookup directories for collectstatic to find static files
@@ -147,3 +147,5 @@ django_heroku.settings(locals())
 PASSWORD_HASHERS = [
     'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',
 ]
+
+CSRF_COOKIE_SECURE = True
