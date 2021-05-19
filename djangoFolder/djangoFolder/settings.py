@@ -22,11 +22,11 @@ import os
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY=os.environ.get('SECRET_KEY')
-#SECRET_KEY='phzoz(zq=!&pca(m3x8qwt*(9xs@7qkv^h8d0*-y$buo3%5rh!'
-#DEBUG=True
+
+SECRET_KEY='phzoz(zq=!&pca(m3x8qwt*(9xs@7qkv^h8d0*-y$buo3%5rh!'
+DEBUG=True
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG =os.environ.get('DEBUG')
+
 
 ALLOWED_HOSTS = [ 'zuridjangoapp.herokuapp.com']
 
